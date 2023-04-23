@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        font-family: "Amazon Ember",Arial,sans-serif;
+        }
+    .card{
+        width:30%;
+        margin-top: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+<body>
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png" width="10%">
+   
+</div>
+
+<div class="container-first d-flex justify-content-center align-items-center ml-5 pl-5">
+    <div class="card">
+        <form>
+            <h4 style="padding-left: 30px;padding-top: 15px;"><b>Sign In</b> </h4><br>
+            <div class="small-container  col-md-11" style="padding-left: 30px;" width="10%">
+
+            </div><br>
+
+            <div class="form-group col-md-11  pl-5 ml-5" style="padding-left: 30px;">
+                <label for="mail">Email or Username</label>
+                <input type ="text" id="mail" placeholder="" class="form-control">
+            </div><br>
+            
+            <div class="form-group col-md-11" style="padding-left: 30px;">
+                <label for="pass">Password</label>
+                <input type ="password" id="pass" placeholder="" class="form-control ">
+            </div>
+        </form><br> 
+        <div class="btn d-grid gap-2">
+            <button class="btn btn-warning">Continue</button>
+        </div><br>
+        <p style="padding-left: 30px;">By continuing, you agree to Amazon's <a href="#">Conditions of Use </a> and<a href="#"> Privacy Notice.</a></p>
+    </div>
+
+</div>
+
+<script>
+
+let btn = document.querySelector('.btn-warning');
+let username = document.getElementById('mail');
+let password = document.getElementById('pass');
+let alertone = document.querySelector('.small-container');
+
+btn.addEventListener('click', function(){
+    if(username.value === "sirisha@gmail.com" && password.value === "siri123"){
+        window.location.href = "https://vedasireesha.github.io/amazonwebpage/amazonwebpage.html";
+    } else {
+        let alertdiv = document.createElement('div');
+        alertdiv.classList.add('alert-danger');
+        alertdiv.textContent = "Wrong Login Credentials";
+        alertone.appendChild(alertdiv);
+    }
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+</body>
+</html>
